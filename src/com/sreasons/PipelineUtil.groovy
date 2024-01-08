@@ -48,7 +48,8 @@ class PipelineUtil implements Serializable {
 
     public void initialize(Map parameters, boolean isExecuteCmdAtInit = true) throws InvalidArgumentException{
 
-        steps.wrap([$class: 'ParentFolderBuildWrapper']) {
+        println("entro a la funcion XDXDXD")
+        /*steps.wrap([$class: 'ParentFolderBuildWrapper']) {
             this.script.env.ENV = this.script.env.ENV_PROJECT
         }
         if( this.script.env.ENV == null || this.script.env.ENV.isEmpty() ){
@@ -96,7 +97,7 @@ class PipelineUtil implements Serializable {
 
         if(isExecuteCmdAtInit){
             this.script.executeCommands(projectConfig.commandsAtInit)
-        }
+        }*/
     }
 
     public void sendNotificacionRest(String message)
